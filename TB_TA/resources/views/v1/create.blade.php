@@ -446,7 +446,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="NIM">NIM</label>
-                  <input type="text" class="form-control" id="NIM" placeholder="Enter NIM" name="NIM">
+                  <input type="text" class="form-control" id="NIM" placeholder="Masukkan NIM" name="NIM">
                 </div>
                 <div class="form-group">
                   <label for="Nama">Nama Mahasiswa</label>
