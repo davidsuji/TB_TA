@@ -452,7 +452,7 @@
             <td>{{$TugasAkhir['Jurusan']}}</td>
             <td>{{$TugasAkhir['Judul_TA']}}</td>
             <td>{{$TugasAkhir['Dosen_Pembimbing']}}</td>
-            <td><img src="../../../images/{{$TugasAkhir['Gambar']}}" height="70" width="60"> </td>
+            <td><img src="../../../gambar/{{$TugasAkhir['Gambar']}}" height="70" width="60"> </td>
             <td><a href="{{action('TugasAkhirController@edit', $TugasAkhir['id'])}}" class="btn btn-warning">Ubah</a></td>
             <td>
 
