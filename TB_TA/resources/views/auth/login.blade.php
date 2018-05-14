@@ -37,7 +37,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Login untuk memulai</p>
 
      <form method="POST" action="{{ route('login') }}">
                         @csrf
