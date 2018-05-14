@@ -449,8 +449,8 @@
                   <input type="text" class="form-control" id="NIM" placeholder="Enter NIM" name="NIM">
                 </div>
                 <div class="form-group">
-                  <label for="Nama">Nama_Mahasiswa</label>
-                  <input type="text" class="form-control" id="Nama_Mahasiswa"placeholder="Enter Name_Mahasiswa" name="Nama_Mahasiswa">
+                  <label for="Nama">Nama Mahasiswa</label>
+                  <input type="text" class="form-control" id="Nama_Mahasiswa"placeholder="Enter Name Mahasiswa" name="Nama_Mahasiswa">
                 </div>
 
                  <div class="form-group">
@@ -472,13 +472,13 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="Judul_TA">Judul_TA</label>
-                  <input type="text" class="form-control" id="Judul_TA"placeholder="Enter Judul_TA" name="Judul_TA">
+                  <label for="Judul_TA">Judul Tugas Akhir</label>
+                  <input type="text" class="form-control" id="Judul_TA"placeholder="Enter Judul Tugas Akhir" name="Judul_TA">
                 </div>
 
                 <div class="form-group">
-                  <label for="Dosen_Pembimbing">Dosen_Pembimbing</label>
-                  <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Enter Dosen_Pembimbing" name="Dosen_Pembimbing">
+                  <label for="Dosen_Pembimbing">Dosen Pembimbing</label>
+                  <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Enter Dosen Pembimbing" name="Dosen_Pembimbing">
                 </div>
 
                 <div class="form-group">
