@@ -42,7 +42,7 @@
      <form method="POST" action="{{ route('login') }}">
                         @csrf
       <div class="form-group has-feedback">
-        <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
+        <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" placeholder="Username" required autofocus>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
         @if ($errors->has('username'))
             <span class="invalid-feedback">
@@ -51,7 +51,7 @@
         @endif
       </div>
       <div class="form-group has-feedback">
-        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         @if ($errors->has('password'))
             <span class="invalid-feedback">
