@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\TugasAkhir;
+use storage;
 
 class TugasAkhirController extends Controller
 {
@@ -48,14 +49,25 @@ class TugasAkhirController extends Controller
         'Jurusan' => 'required',
         'Judul_TA' => 'required',
         'Dosen_Pembimbing' => 'required',
-        'Gambar' => 'required',
+        'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
         ]);
 
-        $file = $request->file('Gambar');
+        if ($request->hasFile('Gambar')) {
+          $file = $request->file('Gambar');
+          $ext = $file->getClientOriginalExtension();
+
+          if ($request->file('Gambar')->isValid()) {
+            $filename = date('YmdHis').".$ext";
+            $upload_path = 'gambar';
+            $request->file('Gambar')->move($upload_path, $filename);
+            $TugasAkhir['Gambar'] = $filename;
+          }
+        }
+        /**$file = $request->file('Gambar');
         $filename = $file->getClientOriginalName();
         $file->move(public_path('gambar'), $filename);
 
-        $TugasAkhir['Gambar'] = $filename;
+        $TugasAkhir['Gambar'] = $filename;**/
 
         TugasAkhir::create($TugasAkhir);
         return back()->with('success', 'Data TugasAkhir has been added');
