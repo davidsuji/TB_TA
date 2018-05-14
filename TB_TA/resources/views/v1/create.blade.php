@@ -396,7 +396,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Menu Inputan Data
+        Inputan Data
         <small>it all starts here</small>
       </h1>
       <ol class="breadcrumb">
@@ -487,11 +487,9 @@
               </div>
             </form>
 
-
         </div>
         <!-- /.box-body -->
-        <div class="box-footer">
-          Footer
+        <div class="box-footer">        
         </div>
         <!-- /.box-footer-->
       </div>

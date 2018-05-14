@@ -396,7 +396,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blank page
+        Daftar Tugas Akhir
         <small>it all starts here</small>
       </h1>
       <ol class="breadcrumb">
@@ -412,14 +412,12 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
+          <h3 class="box-title">Data Tugas Akhir</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                     title="Collapse">
               <i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fa fa-times"></i></button>
           </div>
         </div>
         <div class="box-body">
@@ -434,11 +432,13 @@
         <table class="table table-striped">
           <thead>
           <tr>
-            <th>NIM</th>
-            <th>Nama</th>
-            <th>Jenis Kelamin</th>
-            <th>No Hp</th>
-            <th>Gambar</th>
+            <th></th>
+            <th><p align="center">NIM</p></th>
+            <th><p align="center">Nama</p></th>
+            <th><p align="center">Jenis Kelamin</p></th>
+            <th><p align="center">Jurusan</p></th>
+            <th><p align="center">Judul TA</p></th>
+            <th><p align="center">Dosen Pembimbing</p></th>
 
             <th colspan="2"></th>
           </tr>
@@ -446,13 +446,14 @@
         <tbody>
           @foreach($TugasAkhir as $TugasAkhir)
           <tr>
-            <td>{{$TugasAkhir['NIM']}}</td>
-            <td>{{$TugasAkhir['Nama_Mahasiswa']}}</td>
-            <td>{{$TugasAkhir['Jenis_Kelamin']}}</td>
-            <td>{{$TugasAkhir['Jurusan']}}</td>
-            <td>{{$TugasAkhir['Judul_TA']}}</td>
-            <td>{{$TugasAkhir['Dosen_Pembimbing']}}</td>
             <td><img src="../../../gambar/{{$TugasAkhir['Gambar']}}" height="70" width="60"> </td>
+            <td><p align="center">{{$TugasAkhir['NIM']}}</p></td>
+            <td><p align="center">{{$TugasAkhir['Nama_Mahasiswa']}}</p></td>
+            <td><p align="center">{{$TugasAkhir['Jenis_Kelamin']}}</p></td>
+            <td><p align="center">{{$TugasAkhir['Jurusan']}}</p></td>
+            <td><p align="center">{{$TugasAkhir['Judul_TA']}}</p></td>
+            <td><p align="center">{{$TugasAkhir['Dosen_Pembimbing']}}</p></td>
+            
             <td><a href="{{action('TugasAkhirController@edit', $TugasAkhir['id'])}}" class="btn btn-warning">Ubah</a></td>
             <td>
 
@@ -470,8 +471,7 @@
 
         </div>
         <!-- /.box-body -->
-        <div class="box-footer">
-          Footer
+        <div class="box-footer">        
         </div>
         <!-- /.box-footer-->
       </div>
