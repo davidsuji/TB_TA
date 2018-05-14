@@ -444,11 +444,11 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="NIM">NIM</label>
-                  <input type="text" class="form-control" id="NIM" placeholder="Masukkan NIM" name="NIM">
+                  <input type="text" class="form-control" id="NIM" placeholder="NIM" name="NIM">
                 </div>
                 <div class="form-group">
                   <label for="Nama">Nama Mahasiswa</label>
-                  <input type="text" class="form-control" id="Nama_Mahasiswa"placeholder="Masukkan Nama Mahasiswa" name="Nama_Mahasiswa">
+                  <input type="text" class="form-control" id="Nama_Mahasiswa"placeholder="Nama Mahasiswa" name="Nama_Mahasiswa">
                 </div>
 
                  <div class="form-group">
@@ -466,17 +466,17 @@
 
                 <div class="form-group">
                   <label for="Jurusan">Jurusan</label>
-                  <input type="text" class="form-control" id="Jurusan"placeholder="Masukan Nama Jurusan" name="Jurusan">
+                  <input type="text" class="form-control" id="Jurusan"placeholder="Nama Jurusan" name="Jurusan">
                 </div>
 
                 <div class="form-group">
                   <label for="Judul_TA">Judul Tugas Akhir</label>
-                  <input type="text" class="form-control" id="Judul_TA"placeholder="Masukkan Judul Tugas Akhir" name="Judul_TA">
+                  <input type="text" class="form-control" id="Judul_TA"placeholder="Judul Tugas Akhir" name="Judul_TA">
                 </div>
 
                 <div class="form-group">
                   <label for="Dosen_Pembimbing">Dosen Pembimbing</label>
-                  <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Masukkan Dosen Pembimbing" name="Dosen_Pembimbing">
+                  <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Nama Dosen Pembimbing" name="Dosen_Pembimbing">
                 </div>
 
                 <div class="form-group">
