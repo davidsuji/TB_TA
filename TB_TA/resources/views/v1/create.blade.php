@@ -450,7 +450,7 @@
                 </div>
                 <div class="form-group">
                   <label for="Nama">Nama Mahasiswa</label>
-                  <input type="text" class="form-control" id="Nama_Mahasiswa"placeholder="Enter Name Mahasiswa" name="Nama_Mahasiswa">
+                  <input type="text" class="form-control" id="Nama_Mahasiswa"placeholder="Masukkan Nama Mahasiswa" name="Nama_Mahasiswa">
                 </div>
 
                  <div class="form-group">
@@ -468,17 +468,17 @@
 
                 <div class="form-group">
                   <label for="Jurusan">Jurusan</label>
-                  <input type="text" class="form-control" id="Jurusan"placeholder="Enter Jurusan" name="Jurusan">
+                  <input type="text" class="form-control" id="Jurusan"placeholder="Masukan Nama Jurusan" name="Jurusan">
                 </div>
 
                 <div class="form-group">
                   <label for="Judul_TA">Judul Tugas Akhir</label>
-                  <input type="text" class="form-control" id="Judul_TA"placeholder="Enter Judul Tugas Akhir" name="Judul_TA">
+                  <input type="text" class="form-control" id="Judul_TA"placeholder="Masukkan Judul Tugas Akhir" name="Judul_TA">
                 </div>
 
                 <div class="form-group">
                   <label for="Dosen_Pembimbing">Dosen Pembimbing</label>
-                  <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Enter Dosen Pembimbing" name="Dosen_Pembimbing">
+                  <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Masukkan Dosen Pembimbing" name="Dosen_Pembimbing">
                 </div>
 
                 <div class="form-group">
