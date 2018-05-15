@@ -126,6 +126,8 @@ class TugasAkhirController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $TugasAkhir = TugasAkhir::find($id);
+        $TugasAkhir->delete();
+        return redirect('v1')->with('success','data dihapus');
     }
 }

@@ -1,12 +1,14 @@
 @extends('layouts.app')
+@section('sidebar')
 
 @section('content')
+@section('title','Daftar Tugas Akhir')
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Blank Page</title>
+  <title></title>
 </head>
 <body>
     <section class="content-header">
