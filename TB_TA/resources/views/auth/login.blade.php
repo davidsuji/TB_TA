@@ -1,7 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
-@section('title','Login')
 <!DOCTYPE html>
 <html>
 <head>
@@ -103,4 +100,4 @@
 </script>
 </body>
 </html>
-@endsection
+
