@@ -49,7 +49,7 @@ class TugasAkhirController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $id)
+    public function store(Request $request)
     {
         //
         $TugasAkhir = $this->validate(request(), [
@@ -62,22 +62,9 @@ class TugasAkhirController extends Controller
         'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
         ]);
 
-        if ($request->hasFile('Gambar')) {
-            $file = $request->file('Gambar');
-            $ext = $file->getClientOriginalExtension();
-
-        if ($request->file('Gambar')->isValid()) {
-            $filename = date('YmdHis').".$ext";
-            $upload_path = 'gambar';
-            $request->file('Gambar')->move($upload_path, $filename);
-            $TugasAkhir['Gambar'] = $filename;
-          }
-        }
-        /**$file = $request->file('Gambar');
-        $filename = $file->getClientOriginalName();
+        $file = $request->file('Gambar');
+        $filename = $file->getClientOriginalExtension();
         $file->move(public_path('gambar'), $filename);
-
-        $TugasAkhir['Gambar'] = $filename;**/
 
         TugasAkhir::create($TugasAkhir);
         return back()->with('success', 'Data TugasAkhir has been added');
@@ -152,10 +139,10 @@ class TugasAkhirController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $id)
+    public function destroy($id)
     {
         $TugasAkhir = TugasAkhir::find($id);
         $TugasAkhir->delete();
-        return redirect('v1')->with('success','data dihapus');
+        return redirect('v1')->with('success','Data has been deleted');
     }
 }
