@@ -2,7 +2,7 @@
 @section('sidebar')
 
 @section('content')
-@section('title','Edit Tugas Akhir')
+@section('title','Edit Data')
 <!DOCTYPE html>
 <html>
 <head>

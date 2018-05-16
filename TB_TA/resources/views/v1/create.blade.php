@@ -2,7 +2,7 @@
 @section('sidebar')
 
 @section('content')
-@section('title','Tambah Tugas Akhir')
+@section('title','Input Data')
   <!-- Content Wrapper. Contains page content -->
  
     <section class="content-header">

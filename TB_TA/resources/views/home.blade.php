@@ -5,7 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">
+                    <font size=6>
+                        <font face ="WingDings">
+                        Welcome To Website "Tugas Akhir"
+                        </font>
+                    </font>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +20,6 @@
                         </div>
                     @endif
 
-                    You are logged in!
                 </div>
             </div>
         </div>
