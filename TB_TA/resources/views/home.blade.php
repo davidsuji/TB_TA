@@ -7,12 +7,12 @@
             <div class="card">
                 <div class="card-header">
                     <font size=6>
-                        <font face ="WingDings">
+                        <font face ="arial-Black">
                         Welcome To Website "Tugas Akhir"
                         </font>
                     </font>
                 </div>
-                
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Lihat Persyaratan Pendaftaran TA</button>
                 </div>
@@ -21,7 +21,7 @@
                     <button type="submit" class="btn btn-primary">Pendaftaran TA</button>
                 </div>
 
-                
+
 
                 <div class="card-body">
                     @if (session('status'))

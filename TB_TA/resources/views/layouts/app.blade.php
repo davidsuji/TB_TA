@@ -70,23 +70,23 @@ desired effect
       <span class="logo-mini"><b>T</b>A</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Tugas</b>Akhir</span>
-    </a>      
+    </a>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
 
-      </a>      
+      </a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          
+
           @guest
              <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                
+
           @else
-          
+
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -103,7 +103,7 @@ desired effect
                 <img src="{{asset('AdminLTE-2.4.3/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
 
                 <p>
-                 {{ Auth::user()->name }} 
+                 {{ Auth::user()->name }}
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -140,7 +140,7 @@ desired effect
           </li>
             @endguest
           <!-- Control Sidebar Toggle Button -->
-          
+
         </ul>
       </div>
     </nav>
@@ -160,7 +160,7 @@ desired effect
         </div>
         @guest
                 <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                
+
             @else
         <div class="pull-left info">
           <p>{{ Auth::user()->name }}</p>
@@ -195,6 +195,17 @@ desired effect
           <ul class="treeview-menu">
             <li><a href="{{url('mahasiswa')}}">Lihat Data Mahasiswa</a></li>
             <li><a href="{{url('mahasiswa/create')}}">Tambah Mahasiswa</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-user"></i> <span>Dosen</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{url('dosen')}}">Lihat Data Dosen</a></li>
+            <li><a href="{{url('dosen/create')}}">Tambah Dosen</a></li>
           </ul>
         </li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
@@ -232,7 +243,7 @@ desired effect
     <!-- Default to the left -->
     <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
   </footer>
-  
+
   <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>

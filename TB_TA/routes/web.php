@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::resource('v1', 'TugasAkhirController');
 Route::resource('mahasiswa', 'MahasiswaController');
+Route::resource('dosen','DosenController');
