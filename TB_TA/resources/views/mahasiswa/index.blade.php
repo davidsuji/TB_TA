@@ -53,28 +53,35 @@
             <th><p align="center">NIM</p></th>
             <th><p align="center">Nama</p></th>
             <th><p align="center">Jenis Kelamin</p></th>
+            <th><p align="center">Alamat</p></th>
+            <th><p align="center">Fakultas</p></th>
             <th><p align="center">Jurusan</p></th>
-            <th><p align="center">Judul TA</p></th>
-            <th><p align="center">Dosen Pembimbing</p></th>
+            <th><p align="center">IPK</p></th>
+            <th><p align="center">Jumlah SKS</p></th>            
+            <th><p align="center">No Handphone</p></th>          
+            <th></th>
 
             <th colspan="2"></th>
           </tr>
           </thead>
         <tbody>
-          @foreach($TugasAkhir as $TugasAkhir)
+          @foreach($Mahasiswa as $Mahasiswa)
           <tr>
-            <td><img src="../../../gambar/{{$TugasAkhir['Gambar']}}" height="70" width="60"> </td>
-            <td><p align="center">{{$TugasAkhir['NIM']}}</p></td>
-            <td><p align="center">{{$TugasAkhir['Nama_Mahasiswa']}}</p></td>
-            <td><p align="center">{{$TugasAkhir['Jenis_Kelamin']}}</p></td>
-            <td><p align="center">{{$TugasAkhir['Jurusan']}}</p></td>
-            <td><p align="center">{{$TugasAkhir['Judul_TA']}}</p></td>
-            <td><p align="center">{{$TugasAkhir['Dosen_Pembimbing']}}</p></td>
-            
-            <td><a href="{{action('TugasAkhirController@edit', $TugasAkhir['id'])}}" class="btn btn-warning">Ubah</a></td>
+            <td><img src="../../../gambar/{{$Mahasiswa['Gambar']}}" height="70" width="60"> </td>
+            <td><p align="center">{{$Mahasiswa['NIM']}}</p></td>
+            <td><p align="center">{{$Mahasiswa['Nama_Mahasiswa']}}</p></td>
+            <td><p align="center">{{$Mahasiswa['Jenis_Kelamin']}}</p></td>
+            <td><p align="center">{{$Mahasiswa['Alamat']}}</p></td>
+            <td><p align="center">{{$Mahasiswa['Fakultas']}}</p></td>
+            <td><p align="center">{{$Mahasiswa['Jurusan']}}</p></td>
+            <td><p align="center">{{$Mahasiswa['IPK']}}</p></td>
+            <td><p align="center">{{$Mahasiswa['Jumlah_SKS']}}</p></td>            
+            <td><p align="center">{{$Mahasiswa['No_Hp']}}</p></td>                        
+
+            <td><a href="{{action('MahasiswaController@edit', $Mahasiswa['id'])}}" class="btn btn-warning">Ubah</a></td>
             <td>
 
-              <form action="{{action('TugasAkhirController@destroy', $TugasAkhir['id'])}}" method="post">
+              <form action="{{action('MahasiswaController@destroy', $Mahasiswa['id'])}}" method="post">
 
                 {{csrf_field()}}
                 <input name="_method" type="hidden" value="DELETE">

@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 //use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\TugasAkhir;
+use App\Mahasiswa;
 use storage;
 
-class TugasAkhirController extends Controller
+class MahasiswaController extends Controller
 {
      /**
      * Create a new controller instance.
@@ -28,8 +28,8 @@ class TugasAkhirController extends Controller
     public function index()
     {
         //
-        $TugasAkhir = TugasAkhir::all()->toArray();
-        return view('v1.index', compact('TugasAkhir'));
+        $Mahasiswa = Mahasiswa::all()->toArray();
+        return view('mahasiswa.index', compact('Mahasiswa'));
     }
 
     /**
@@ -40,7 +40,7 @@ class TugasAkhirController extends Controller
     public function create()
     {
         //
-        return view('v1.create');
+        return view('mahasiswa.create_mahasiswa');
     }
 
     /**
@@ -52,22 +52,27 @@ class TugasAkhirController extends Controller
     public function store(Request $request)
     {
         //
-        $TugasAkhir = $this->validate(request(), [
+        $Mahasiswa = $this->validate(request(),
+        [
         'NIM' => 'required',
         'Nama_Mahasiswa' => 'required',
         'Jenis_Kelamin' => 'required',
+        'Alamat' => 'required|string|max:100',
+        'Fakultas' => 'required',        
         'Jurusan' => 'required',
+        'IPK' => 'required',
+        'Jumlah_SKS' => 'required',
         'Judul_TA' => 'required',
-        'Dosen_Pembimbing' => 'required',
-        'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
+        'No_Hp' => 'required',
+        'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',        
         ]);
 
         $file = $request->file('Gambar');
         $filename = $file->getClientOriginalExtension();
         $file->move(public_path('gambar'), $filename);
 
-        TugasAkhir::create($TugasAkhir);
-        return back()->with('success', 'Data TugasAkhir has been added');
+        Mahasiswa::create($Mahasiswa);
+        return back()->with('success', 'Data Mahasiswa has been added');
     }
 
     /**
@@ -89,8 +94,8 @@ class TugasAkhirController extends Controller
      */
     public function edit($id)
     {
-        $TugasAkhir = TugasAkhir::find($id);
-        return view('v1.edit',compact('TugasAkhir','id'));
+        $Mahasiswa = Mahasiswa::find($id);
+        return view('mahasiswa.edit',compact('Mahasiswa','id'));
     }
 
     /**
@@ -103,35 +108,34 @@ class TugasAkhirController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $TugasAkhir = TugasAkhir::find($id);
+        $Mahasiswa = Mahasiswa::find($id);
         $this->validate(request(), 
         [
         'NIM' => 'required',
         'Nama_Mahasiswa' => 'required',
         'Jenis_Kelamin' => 'required',
-        'Jurusan' => 'required',
-        'Judul_TA' => 'required',
-        'Dosen_Pembimbing' => 'required',
+        'Jurusan' => 'required',                
         'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
-        ]
-    );
+        ]);
 
-        $TugasAkhir->NIM = $request->get('NIM');
-        $TugasAkhir->Nama_Mahasiswa = $request->get('Nama_Mahasiswa');
-        $TugasAkhir->Jenis_Kelamin = $request->get('Jenis_Kelamin');
-        $TugasAkhir->Jurusan = $request->get('Jurusan');
-        $TugasAkhir->Judul_TA = $request->get('Judul_TA');
-        $TugasAkhir->Dosen_Pembimbing = $request->get('Dosen_Pembimbing');
+        $Mahasiswa->NIM = $request->get('NIM');
+        $Mahasiswa->Nama_Mahasiswa = $request->get('Nama_Mahasiswa');
+        $Mahasiswa->Jenis_Kelamin = $request->get('Jenis_Kelamin');
+        $Mahasiswa->Alamat = $request->get('Alamat');
+        $Mahasiswa->Fakultas = $request->get('Fakultas');
+        $Mahasiswa->Jurusan = $request->get('Jurusan');
+        $Mahasiswa->IPK = $request->get('IPK');
+        $Mahasiswa->Jumlah_SKS = $request->get('Jumlah_SKS');        
+        $Mahasiswa->No_Hp = $request->get('No_Hp');        
 
         $file = $request->file('Gambar');
         $filename = $file->getClientOriginalName();
         $file->move(public_path('images'), $filename);
-
         
-        $TugasAkhir->Gambar = $filename;
-        $TugasAkhir->save();
-        return redirect('v1')->with('success','Data has been updated');         
-        }    
+        $Mahasiswa->Gambar = $filename;
+        $Mahasiswa->save();
+        return redirect('mahasiswa')->with('success','Data has been updated');    
+    }    
 
     /**
      * Remove the specified resource from storage.
@@ -141,8 +145,8 @@ class TugasAkhirController extends Controller
      */
     public function destroy($id)
     {
-        $TugasAkhir = TugasAkhir::find($id);
-        $TugasAkhir->delete();
-        return redirect('v1')->with('success','Data has been deleted');
+        $Mahasiswa = Mahasiswa::find($id);
+        $Mahasiswa->delete();
+        return redirect('mahasiswa')->with('success','Data has been deleted');
     }
 }

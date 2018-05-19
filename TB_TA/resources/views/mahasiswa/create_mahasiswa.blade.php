@@ -50,13 +50,14 @@
         @endif
         </div>
 
-            <form method="post" action="{{url('v1')}}" enctype = "multipart/form-data">
+            <form method="post" action="{{url('mahasiswa')}}" enctype = "multipart/form-data">
               {{csrf_field()}}
               <div class="box-body">
                 <div class="form-group">
                   <label for="NIM">NIM</label>
                   <input type="text" class="form-control" id="NIM" placeholder="NIM" name="NIM">
                 </div>
+
                 <div class="form-group">
                   <label for="Nama">Nama Mahasiswa</label>
                   <input type="text" class="form-control" id="Nama_Mahasiswa"placeholder="Nama Mahasiswa" name="Nama_Mahasiswa">
@@ -76,26 +77,38 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="Alamat">Alamat</label>
+                  <input type="text" class="form-control" id="Alamat"placeholder="Alamat Tempat Tinggal" name="Alamat">
+                </div>
+
+                <div class="form-group">
+                  <label for="Fakultas">Fakultas</label>
+                  <input type="text" class="form-control" id="Fakultas"placeholder="Nama Fakultas" name="Fakultas">
+                </div>
+
+                <div class="form-group">
                   <label for="Jurusan">Jurusan</label>
                   <input type="text" class="form-control" id="Jurusan"placeholder="Nama Jurusan" name="Jurusan">
                 </div>
 
                 <div class="form-group">
-                  <label for="Judul_TA">Judul Tugas Akhir</label>
-                  <input type="text" class="form-control" id="Judul_TA"placeholder="Judul Tugas Akhir" name="Judul_TA">
+                  <label for="IPK">IPK</label>
+                  <input type="text" class="form-control" id="IPK"placeholder="Jumlah IPK" name="IPK">
                 </div>
 
                 <div class="form-group">
-                  <label for="Dosen_Pembimbing">Dosen Pembimbing</label>
-                  <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Nama Dosen Pembimbing" name="Dosen_Pembimbing">
+                  <label for="Jumlah_SKS">Jumlah SKS</label>
+                  <input type="text" class="form-control" id="Jumlah_SKS"placeholder="Jumlah SKS" name="Jumlah_SKS">
+                </div>     
+
+                <div class="form-group">
+                  <label for="No_Hp">No Handphone</label>
+                  <input type="text" class="form-control" id="No_Hp"placeholder="Nomor Handphone" name="No_Hp">
                 </div>
 
                 <div class="form-group">
                   <label for="Gambar">File Gambar</label>
                   <input type="file" id="Gambar" name="Gambar">
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
             </form>
 
         </div>

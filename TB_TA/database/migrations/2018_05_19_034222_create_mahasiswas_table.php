@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTugasAkhirsTable extends Migration
+class CreateMahasiswasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTugasAkhirsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tugas_akhirs', function (Blueprint $table) {
+        Schema::create('mahasiswas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('NIM');
             $table->string('Nama_Mahasiswa');
@@ -39,6 +39,6 @@ class CreateTugasAkhirsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tugas_akhirs');
+        Schema::dropIfExists('mahasiswas');
     }
 }

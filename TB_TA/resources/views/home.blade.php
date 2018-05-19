@@ -12,6 +12,16 @@
                         </font>
                     </font>
                 </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Lihat Persyaratan Pendaftaran TA</button>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Pendaftaran TA</button>
+                </div>
+
+                
 
                 <div class="card-body">
                     @if (session('status'))

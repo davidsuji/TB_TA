@@ -58,6 +58,7 @@
                   <label for="NIM">NIM</label>
                   <input type="text" class="form-control" id="NIM" placeholder="NIM" name="NIM" value="{{$TugasAkhir->NIM}}">
                 </div>
+
                 <div class="form-group">
                   <label for="Nama_Mahasiswa">Nama Mahasiswa</label>
                   <input type="text" class="form-control" id="Nama_Mahasiswa"placeholder="Nama Mahasiswa" name="Nama_Mahasiswa" value="{{$TugasAkhir->Nama_Mahasiswa}}">
@@ -77,6 +78,11 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="Alamat">Alamat</label>
+                  <input type="text" class="form-control" id="Alamat"placeholder="Alamat Tempat Tinggal" name="Alamat" value="{{$TugasAkhir->Alamat}}">
+                </div>
+
+                <div class="form-group">
                   <label for="Jurusan">Jurusan</label>
                   <input type="text" class="form-control" id="Jurusan"placeholder="Nama Jurusan" name="Jurusan" value="{{$TugasAkhir->Jurusan}}">
                 </div>
@@ -84,8 +90,8 @@
                 <div class="form-group">
                   <label for="Judul_TA">Judul Tugas Akhir</label>
                   <input type="text" class="form-control" id="Judul_TA"placeholder="Judul Tugas Akhir" name="Judul_TA" value="{{$TugasAkhir->Judul_TA}}">
-
                 </div>
+                
                 <div class="form-group">
                   <label for="Dosen_Pembimbing">Dosen Pembimbing</label>
                   <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Nama Dosen Pembimbing" name="Dosen_Pembimbing" value="{{$TugasAkhir->Dosen_Pembimbing}}">
