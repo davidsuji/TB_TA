@@ -61,15 +61,16 @@ class MahasiswaController extends Controller
         'Fakultas' => 'required',        
         'Jurusan' => 'required',
         'IPK' => 'required',
-        'Jumlah_SKS' => 'required',
-        'Judul_TA' => 'required',
+        'Jumlah_SKS' => 'required',        
         'No_Hp' => 'required',
         'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',        
         ]);
 
         $file = $request->file('Gambar');
-        $filename = $file->getClientOriginalExtension();
+        $filename = $file->getClientOriginalName();
         $file->move(public_path('gambar'), $filename);
+
+        $Mahasiswa['Gambar'] = $filename;
 
         Mahasiswa::create($Mahasiswa);
         return back()->with('success', 'Data Mahasiswa has been added');

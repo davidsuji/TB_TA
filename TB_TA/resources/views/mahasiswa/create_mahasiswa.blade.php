@@ -109,6 +109,9 @@
                 <div class="form-group">
                   <label for="Gambar">File Gambar</label>
                   <input type="file" id="Gambar" name="Gambar">
+
+                  <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+                </div>
             </form>
 
         </div>
