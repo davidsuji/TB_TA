@@ -21,11 +21,9 @@ class CreateMahasiswasTable extends Migration
             $table->string('Alamat');
             $table->string('Fakultas');
             $table->string('Jurusan');
-            $table->string('Jumlah_SKS');
             $table->string('IPK');
-            $table->string('Judul_TA');
-            $table->string('No_Hp');            
-            $table->string('Dosen_Pembimbing');
+            $table->string('Jumlah_SKS');            
+            $table->string('No_Hp');
             $table->string('Gambar');
             $table->string('Bukti_Pembayaran');
             $table->timestamps();

@@ -110,6 +110,10 @@
                   <label for="Gambar">File Gambar</label>
                   <input type="file" id="Gambar" name="Gambar">
 
+                <div class="form-group">
+                  <label for="Bukti_Pembayaran">File Bukti Pembayaran</label>
+                  <input type="file" id="Bukti_Pembayaran" name="Bukti_Pembayaran">
+
                   <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>

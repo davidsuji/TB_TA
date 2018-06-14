@@ -31,9 +31,8 @@
           <h3 class="box-title">Data Tugas Akhir</h3>
 
           <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                    title="Collapse">
-              <i class="fa fa-minus"></i></button>                        
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+            <i class="fa fa-minus"></i></button>                        
           </div>
         </div>
         <div class="box-body">
@@ -83,23 +82,37 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="Fakultas">Fakultas</label>
+                  <input type="text" class="form-control" id="Fakultas"placeholder="Fakultas" name="JFakultas" value="{{$Mahasiswa->Fakultas}}">
+                </div>
+
+                <div class="form-group">
                   <label for="Jurusan">Jurusan</label>
                   <input type="text" class="form-control" id="Jurusan"placeholder="Nama Jurusan" name="Jurusan" value="{{$Mahasiswa->Jurusan}}">
                 </div>
 
                 <div class="form-group">
-                  <label for="Judul_TA">Judul Tugas Akhir</label>
-                  <input type="text" class="form-control" id="Judul_TA"placeholder="Judul Tugas Akhir" name="Judul_TA" value="{{$Mahasiswa->Judul_TA}}">
+                  <label for="IPK">IPK</label>
+                  <input type="text" class="form-control" id="IPK"placeholder="IPK" name="Jurusan" value="{{$Mahasiswa->IPK}}">
                 </div>
-                
+
                 <div class="form-group">
-                  <label for="Dosen_Pembimbing">Dosen Pembimbing</label>
-                  <input type="text" class="form-control" id="Dosen_Pembimbing"placeholder="Nama Dosen Pembimbing" name="Dosen_Pembimbing" value="{{$Mahasiswa->Dosen_Pembimbing}}">
+                  <label for="Jumlah_SKS">Jumlah SKS</label>
+                  <input type="text" class="form-control" id="Jumlah_SKS"placeholder="Jumlah SKS" name="Jumlah_SKS" value="{{$Mahasiswa->Jumlah_SKS}}">
+                </div>
+
+                <div class="form-group">
+                  <label for="No_Hp">No Handphone</label>
+                  <input type="text" class="form-control" id="No_Hp"placeholder="Nomor Handphone" name="No_Hp" value="{{$Mahasiswa->No_Hp}}">
                 </div>
 
                 <div class="form-group">
                   <label for="Gambar">File Gambar</label>
                   <input type="file" id="Gambar" name="Gambar" >
+
+                <div class="form-group">
+                  <label for="Bukti_Pembayaran">File Bukti Pembayaran</label>
+                  <input type="file" id="Bukti_Pembayaran" name="Bukti_Pembayaran" >  
 
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>

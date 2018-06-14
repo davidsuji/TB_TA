@@ -78,15 +78,16 @@
             <td><p align="center">{{$Mahasiswa['Jumlah_SKS']}}</p></td>            
             <td><p align="center">{{$Mahasiswa['No_Hp']}}</p></td>                        
 
-            <td><a href="{{action('MahasiswaController@edit', $Mahasiswa['id'])}}" class="btn btn-warning">Ubah</a></td>
+            <td><a href="{{action('MahasiswaController@edit', $Mahasiswa['id'])}}" class="btn btn-warning">
+              {{csrf_field()}}             
+                Ubah</a></td>
             <td>
 
-              <form action="{{action('MahasiswaController@destroy', $Mahasiswa['id'])}}" method="post">
-
-                {{csrf_field()}}
-                <input name="_method" type="hidden" value="DELETE">
-                <button class="btn btn-danger" type="submit">Hapus</button>
-              </form>
+            <form action="{{action('MahasiswaController@destroy', $Mahasiswa['id'])}}" method="post">
+              {{csrf_field()}}
+              <input name="_method" type="hidden" value="DELETE">
+              <button class="btn btn-danger" type="submit">Hapus</button>
+            </form>
             </td>
           </tr>
         @endforeach

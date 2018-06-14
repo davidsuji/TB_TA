@@ -63,7 +63,8 @@ class MahasiswaController extends Controller
         'IPK' => 'required',
         'Jumlah_SKS' => 'required',        
         'No_Hp' => 'required',
-        'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',        
+        'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
+        'Bukti_Pembayaran' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',       
         ]);
 
         $file = $request->file('Gambar');
@@ -96,7 +97,7 @@ class MahasiswaController extends Controller
     public function edit($id)
     {
         $Mahasiswa = Mahasiswa::find($id);
-        return view('mahasiswa.edit',compact('Mahasiswa','id'));
+        return view('mahasiswa.edit_mahasiswa',compact('Mahasiswa','id'));
     }
 
     /**
@@ -115,8 +116,14 @@ class MahasiswaController extends Controller
         'NIM' => 'required',
         'Nama_Mahasiswa' => 'required',
         'Jenis_Kelamin' => 'required',
-        'Jurusan' => 'required',                
+        'Alamat' => 'required',
+        'Fakultas' => 'required',
+        'Jurusan' => 'required',
+        'IPK' => 'required',
+        'Jumlah_SKS' => 'required',
+        'No_Hp' => 'required',
         'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
+        'Bukti_Pembayaran' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
         ]);
 
         $Mahasiswa->NIM = $request->get('NIM');
@@ -132,8 +139,13 @@ class MahasiswaController extends Controller
         $file = $request->file('Gambar');
         $filename = $file->getClientOriginalName();
         $file->move(public_path('images'), $filename);
+
+        $file = $request->file('Bukti_Pembayaran');
+        $filename = $file->getClientOriginalName();
+        $file->move(public_path('images'), $filename);
         
         $Mahasiswa->Gambar = $filename;
+        $Mahasiswa->Bukti_Pembayaran = $filename;
         $Mahasiswa->save();
         return redirect('mahasiswa')->with('success','Data has been updated');    
     }    

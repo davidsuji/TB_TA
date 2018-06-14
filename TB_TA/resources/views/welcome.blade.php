@@ -63,10 +63,10 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="{{asset('gh_pages/img/profile.png')}}" alt="">
-        <h1 class="text-uppercase mb-0">Tugas Akhir</h1>
+        <center><img class="img-fluid mb-5 d-block mx-auto" src="{{asset('gh_pages/img/profile.png')}}" alt=""></center>
+        <center><h1 class="text-uppercase mb-0">Tugas Akhir</h1></center>
         <hr class="star-light">
-        <h2 class="font-weight-light mb-0">Mahasiswa - Universitas Muhammadiyah Malang - Kampus 3</h2>
+        <center><h2 class="font-weight-light mb-0">Mahasiswa - Universitas Muhammadiyah Malang</h2></center>
       </div>
     </header>
 

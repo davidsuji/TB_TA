@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Dosen;
+use storage;
 
 class DosenController extends Controller
 {
@@ -71,7 +72,8 @@ class DosenController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Dosen = Dosen::find($id);
+        return view('dosen.edit_dosen',compact('Dosen','id'));
     }
 
     /**
@@ -84,6 +86,24 @@ class DosenController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $Dosen = Dosen::find($id);
+        $this->validate(request(), 
+        [
+        'NIP' => 'required',
+        'Nama_Dosen' => 'required',        
+        'Jurusan' => 'required',
+        'Bidang_Keahlian' => 'request',
+        'No_Hp' => 'required',
+        ]);
+
+        $Dosen->NIP = $request->get('NIP');
+        $Dosen->Nama_Dosen = $request->get('Nama_Dosen');        
+        $Dosen->Jurusan = $request->get('Jurusan');
+        $Dosen->Bidang_Keahlian = $request->get('Bidang_Keahlian');
+        $Dosen->No_Hp = $request->get('No_Hp');        
+
+        $Dosen->save();
+        return redirect('Dosen')->with('success','Data has been updated');    
     }
 
     /**
@@ -94,6 +114,8 @@ class DosenController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Dosen = Dosen::find($id);
+        $Dosen->delete();
+        return redirect('Dosen')->with('success','Data has been deleted');
     }
 }

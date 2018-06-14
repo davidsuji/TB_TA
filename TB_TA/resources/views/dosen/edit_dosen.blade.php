@@ -2,18 +2,23 @@
 @section('sidebar')
 
 @section('content')
-@section('title','Input Data')
-  <!-- Content Wrapper. Contains page content -->
-
+@section('title','Edit Data')
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Blank Page</title>
+  
     <section class="content-header">
       <h1>
-        Input Data
+        Edit Data
         <small>it all starts here</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Examples</a></li>
-        <li class="active">Input Data</li>
+        <li class="active">Edit Data</li>
       </ol>
     </section>
 
@@ -26,13 +31,12 @@
           <h3 class="box-title">Data Tugas Akhir</h3>
 
           <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                    title="Collapse">
-              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+            <i class="fa fa-minus"></i></button>                        
           </div>
         </div>
         <div class="box-body">
-
+          
          <div>
             @if ($errors->any())
             <div class="alert alert-danger">
@@ -42,30 +46,26 @@
             @endforeach
             </ul>
           </div><br/>
-          @endif
-          @if (\Session::has('success'))
-        <div class="alert alert-success">
-          <p>{{ \Session::get('success') }}</p>
-        </div><br/>
+        </div> 
         @endif
-        </div>
-
-            <form method="post" action="{{url('dosen')}}" enctype = "multipart/form-data">
+        
+            <form method="post" action="{{action('DosenController@update', $id)}}" enctype = "multipart/form-data">
+              @method('PATCH')
               {{csrf_field()}}
               <div class="box-body">
                 <div class="form-group">
                   <label for="NIP">NIP</label>
-                  <input type="text" class="form-control" id="NIP" placeholder="NIP" name="NIP">
+                  <input type="text" class="form-control" id="NIP" placeholder="NIP" name="NIP" value="{{$Dosen->NIP}}">
                 </div>
 
                 <div class="form-group">
-                  <label for="Nama">Nama Dosen</label>
-                  <input type="text" class="form-control" id="Nama_Dosen"placeholder="Nama Dosen" name="Nama_Dosen">
+                  <label for="Nama_Dosen">Nama Dosen</label>
+                  <input type="text" class="form-control" id="Nama_Dosen"placeholder="Nama Dosen" name="Nama_Dosen" value="{{$Dosen->Nama_Dosen}}">
                 </div>
 
                 <div class="form-group">
                   <label for="Jurusan">Jurusan</label>
-                  <input type="text" class="form-control" id="Jurusan" placeholder="Jurusan Dosen" name="Jurusan">
+                  <input type="text" class="form-control" id="Jurusan"placeholder="Nama Jurusan" name="Jurusan" value="{{$Dosen->Jurusan}}">
                 </div>
 
                  <div class="form-group">
@@ -81,7 +81,7 @@
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="Bidang_Keahlian" id="Bidang_Keahlian" value="Jaringan">Jaringan
+                      <input type="radio" name="Bidang_Keahlian" id="Bidang_Keahlian" value="Jaringan">Jaringan                    
                     </label>
                   </div>
                   <div class="radio">
@@ -91,29 +91,30 @@
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="Bidang_Keahlian" id="Bidang_Keahlian" value="Design Web">Design Web
+                      <input type="radio" name="Bidang_Keahlian" id="Bidang_Keahlian" value="Desaign Web">Desaign Web
                     </label>
                   </div>
                   <div class="radio">
                     <label>
                       <input type="radio" name="Bidang_Keahlian" id="Bidang_Keahlian" value="Data Sains">Data Sains
                     </label>
-                  </div>
+                  </div>                  
                 </div>
-
 
                 <div class="form-group">
-                  <label for="No_Hp">Nomer HP</label>
-                  <input type="text" class="form-control" id="No_Hp" placeholder="Nomer HP" name="No_Hp">
+                  <label for="No_Hp">No Handphone</label>
+                  <input type="text" class="form-control" id="No_Hp"placeholder="Nomor Handphone" name="No_Hp" value="{{$Dosen->No_Hp}}">
                 </div>
-                <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
-              </div>
 
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
             </form>
+
 
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
+          Footer
         </div>
         <!-- /.box-footer-->
       </div>
@@ -121,5 +122,7 @@
 
     </section>
     <!-- /.content -->
-
-  @endsection
+  
+</body>
+</html>
+@endsection
