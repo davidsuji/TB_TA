@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
 //use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -64,7 +69,8 @@ class MahasiswaController extends Controller
         'Jumlah_SKS' => 'required',        
         'No_Hp' => 'required',
         'Gambar' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
-        'Bukti_Pembayaran' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',       
+        'Bukti_Pembayaran' => 'required|image|max:500|mimes:jpeg,jpg,png,gif',
+        'Email' => 'required',       
         ]);
 
         $file = $request->file('Gambar');
@@ -72,11 +78,19 @@ class MahasiswaController extends Controller
         $file->move(public_path('gambar'), $filename);
 
         $Mahasiswa['Gambar'] = $filename;
-
+        $password = "123456";
         Mahasiswa::create($Mahasiswa);
+        User::create([
+            'name' => $Mahasiswa['Nama_Mahasiswa'],
+            'email' => $Mahasiswa['Email'],
+            'username' => $Mahasiswa['NIM'],
+            'password' => Hash::make($password),
+        ]);
+    
         return back()->with('success', 'Data Mahasiswa has been added');
     }
 
+    
     /**
      * Display the specified resource.
      *
@@ -160,6 +174,7 @@ class MahasiswaController extends Controller
     {
         $Mahasiswa = Mahasiswa::find($id);
         $Mahasiswa->delete();
+        
         return redirect('mahasiswa')->with('success','Data has been deleted');
     }
 }

@@ -103,7 +103,12 @@
 
                 <div class="form-group">
                   <label for="No_Hp">No Handphone</label>
-                  <input type="text" class="form-control" id="No_Hp"placeholder="Nomor Handphone" name="No_Hp">
+                  <input type="text" class="form-control" id="No_Hp" placeholder="Nomor Handphone" name="No_Hp">
+                </div>
+
+                <div class="form-group">
+                  <label for="Email">Email</label>
+                  <input type="text" class="form-control" id="Email" placeholder="email" name="Email">
                 </div>
 
                 <div class="form-group">
