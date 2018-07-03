@@ -106,6 +106,10 @@
                   <label for="No_Hp">Nomer HP</label>
                   <input type="text" class="form-control" id="No_Hp" placeholder="Nomer HP" name="No_Hp">
                 </div>
+                <div class="form-group">
+                  <label for="Email">Email</label>
+                  <input type="text" class="form-control" id="Email" placeholder="Email" name="Email">
+                </div>
                 <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
               </div>
 

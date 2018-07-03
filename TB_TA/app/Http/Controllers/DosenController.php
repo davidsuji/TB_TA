@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Dosen;
 use storage;
+use App\User;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 class DosenController extends Controller
 {
@@ -46,10 +51,17 @@ class DosenController extends Controller
           'Jurusan'=>'required',
           'Bidang_Keahlian'=>'required' ,
           'No_Hp'=>'required' ,
-
+          'Email' => 'required',
+        ]);
+        $password = "123456";
+        Dosen::create($Dosen);
+        User::create([
+            'name' => $Dosen['Nama_Dosen'],
+            'email' => $Dosen['Email'],
+            'username' => $Dosen['NIP'],
+            'password' => Hash::make($password),
         ]);
 
-        Dosen::create($Dosen);
         return back()->with('success', 'Data Dosen has been added');
     }
 
