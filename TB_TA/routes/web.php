@@ -18,6 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/syarat', function(){
+return view('syarat');
+});
 //Route::resource('v1', 'TugasAkhirController');
 Route::resource('mahasiswa', 'MahasiswaController');
 Route::resource('dosen','DosenController');

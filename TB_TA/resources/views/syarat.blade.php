@@ -13,17 +13,13 @@
                     </font>
                 </div>
 
-                <div class="form-group">
-                    <a href="syarat"> <button type="submit" class="btn btn-primary">Lihat Persyaratan Pendaftaran TA</button></a>
-                </div>
+                <h2>SYRAT PENDAFTARAN TUGAS AKHIR</h2>
 
-                
-                <div class="form-group">
-                    <a href="{{action('JudulTAController@create')}}" class="btn btn-primary">
-                    {{csrf_field()}} 
-                    Pendaftaran . TA {{Auth::user()->username}}</a>
-                </div>
-                
+                <ul>
+                  <li>1. Telah melakukan registrasi ulang</li>
+                  <li>2. Jumlah sks dari semester 1 s.d. 5 minimal 60 sks</li>
+                  <li>3. Kartu kendali telah ditanda tangani dosen pembimbing</li>
+                  <li>4. Laporan Ujian Tugas Akhir 3 Jilid/Eksemplar </li>
 
                 <div class="card-body">
                     @if (session('status'))
