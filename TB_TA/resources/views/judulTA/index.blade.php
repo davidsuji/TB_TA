@@ -51,9 +51,9 @@
           @foreach($JudulTA as $JudulTA)
           <tr>            
             
-            <td><p align="center">{{Auth::user()->name}} ({{$JudulTA['NIM']}})</p></td>
-            <td><p align="center">{{$JudulTA['JudulTA']}}</p></td>
-            <td><p align="center">{{$JudulTA['NIP']}}</p></td>
+            <td><p align="center"><font size = 5>{{Auth::user()->name}} ({{$JudulTA['NIM']}})</font></p></td>
+            <td><p align="center"><font size = 5>{{$JudulTA['JudulTA']}}</font></p></td>
+            <td><p align="center"><font size = 5>{{$JudulTA['NIP']}}</font></p></td>
           </tr>
         @endforeach
 
