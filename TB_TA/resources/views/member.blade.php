@@ -13,24 +13,16 @@
                     </font>
                 </div>
 
-                <div class="form-group">
-                    <a href="syarat"> <button type="submit" class="btn btn-primary">Lihat Persyaratan Pendaftaran TA</button></a>
-                </div>
 
-                
-                <div class="form-group">
-                    <a href="{{action('JudulTAController@create')}}" class="btn btn-primary">
-                    {{csrf_field()}} 
-                    Pendaftaran . TA {{Auth::user()->username}}</a>
-                </div>
-                
 
                 <div class="card-body">
-                    @if (session('status'))
+
                         <div class="alert alert-success">
-                            {{ session('status') }}
+                            <p>
+                                Selamat Datang di halaman Member Web SIM_TA 
+                            </p>
                         </div>
-                    @endif
+
 
                 </div>
             </div>

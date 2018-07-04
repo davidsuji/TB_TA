@@ -47,7 +47,7 @@ class JudulTAController extends Controller
             $Dosen = Dosen::all()->toArray();
             return view('judulTa.create_judulta', compact('Dosen'));
         }else{
-           return redirect('home');
+           return redirect('home')->with('gagal','Anda tidak memenuhi persyaratan');
         }
         
         //return view('judulTa.create_judulta',['Mahasiswas'=>$Mahasiswa]);

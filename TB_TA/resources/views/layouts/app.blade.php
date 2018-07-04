@@ -262,6 +262,7 @@ desired effect
 <script src="{{asset('AdminLTE-2.4.3/bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
 <!-- FastClick -->
 <script src="{{asset('AdminLTE-2.4.3/bower_components/fastclick/lib/fastclick.js')}}"></script>
+<script src="{{asset('AdminLTE-2.4.3/dist/js/demo.js')}}"></script>
 
 <script>
   $(document).ready(function () {
