@@ -29,7 +29,8 @@ class JudulTAController extends Controller
      */
     public function index()
     {
-        //
+        $JudulTA = JudulTA::all()->toArray();
+        return view('judulTa.index', compact('JudulTA'));
     }
 
     /**

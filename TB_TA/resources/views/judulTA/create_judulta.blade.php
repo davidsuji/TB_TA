@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIM TA | Dafrtar Judul</title>
+  <title>SIM TA | Daftar Judul</title>
   
     <section class="content-header">
       <h1>

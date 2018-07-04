@@ -8,19 +8,21 @@
                 <div class="card-header">
                     <font size=6>
                         <font face ="arial-Black">
-                        Welcome To Website "Tugas Akhir"
+
                         </font>
                     </font>
                 </div>
 
                 <h2>SYRAT PENDAFTARAN TUGAS AKHIR</h2>
 
-                <ul>
-                  <li>1. Telah melakukan registrasi ulang</li>
-                  <li>2. Jumlah sks dari semester 1 s.d. 5 minimal 60 sks</li>
-                  <li>3. Kartu kendali telah ditanda tangani dosen pembimbing</li>
-                  <li>4. Laporan Ujian Tugas Akhir 3 Jilid/Eksemplar </li>
-
+                <br>
+                <p>Setiap Mahasiswa Universitas Muhammadiyah Malang bisa mengambil tugas akhir dengan persyaratan sebagai berikut:</p>
+                <ol>
+                  <li> Mahasiswa aktif dan memprogram tugas akhir di KSM pada semester yang sedang berjalan</li>
+                  <li> SKS yang diperoleh minimal 110 SKS dengan IPKum. >= 2,6 (Tidak ada nilai D dan E)</li>
+                  <li> Telah menempuh MK Metode Penilitian dan PKN</li>
+                  <li> Membayar biaya Tugas Akhir </li>
+                </ol>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
