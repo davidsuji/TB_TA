@@ -25,3 +25,26 @@ return view('syarat');
 Route::resource('mahasiswa', 'MahasiswaController');
 Route::resource('dosen','DosenController');
 Route::resource('judulTa','JudulTAController');
+
+// Route untuk user yang baru register
+Route::group(['prefix' => 'home', 'middleware' => ['auth']], function(){
+	Route::get('/', function(){
+		$data['role'] = \App\UserRole::whereUserId(Auth::id())->get();
+		return view('home', $data);
+	});
+});
+// Route untuk user yang admin
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','role:admin']], function(){
+	Route::get('/', function(){
+		$data['users'] = \App\User::whereDoesntHave('roles')->get();
+		return view('admin', $data);
+	});
+});
+// Route untuk user yang member
+Route::group(['prefix' => 'member', 'middleware' => ['auth','role:member']], function(){
+	Route::get('/', function(){
+		return view('member');
+	});
+});
+Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');
