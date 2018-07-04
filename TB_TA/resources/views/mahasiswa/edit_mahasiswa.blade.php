@@ -83,7 +83,7 @@
 
                 <div class="form-group">
                   <label for="Fakultas">Fakultas</label>
-                  <input type="text" class="form-control" id="Fakultas"placeholder="Fakultas" name="JFakultas" value="{{$Mahasiswa->Fakultas}}">
+                  <input type="text" class="form-control" id="Fakultas"placeholder="Fakultas" name="Fakultas" value="{{$Mahasiswa->Fakultas}}">
                 </div>
 
                 <div class="form-group">
@@ -93,7 +93,7 @@
 
                 <div class="form-group">
                   <label for="IPK">IPK</label>
-                  <input type="text" class="form-control" id="IPK"placeholder="IPK" name="Jurusan" value="{{$Mahasiswa->IPK}}">
+                  <input type="text" class="form-control" id="IPK"placeholder="IPK" name="IPK" value="{{$Mahasiswa->IPK}}">
                 </div>
 
                 <div class="form-group">
