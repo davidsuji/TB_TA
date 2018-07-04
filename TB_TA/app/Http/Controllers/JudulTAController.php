@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+//namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -8,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Mahasiswa;
 use App\JudulTA;
 use App\Dosen;
+use Auth;
 use storage;
 
 class JudulTAController extends Controller
@@ -37,8 +39,16 @@ class JudulTAController extends Controller
      */
     public function create()
     {
-        $Dosen = Dosen::all()->toArray();
-        return view('judulTa.create_judulta', compact('Dosen'));
+        $NIM = auth()->user()->username;
+        $Mahasiswa = DB::table('Mahasiswas')->where('NIM',$NIM)->first();
+
+        if ($Mahasiswa->IPK >= 2.6 && $Mahasiswa->Jumlah_SKS >= 110) {
+            $Dosen = Dosen::all()->toArray();
+            return view('judulTa.create_judulta', compact('Dosen'));
+        }else{
+           return redirect('home');
+        }
+        
         //return view('judulTa.create_judulta',['Mahasiswas'=>$Mahasiswa]);
     }
 
@@ -56,7 +66,7 @@ class JudulTAController extends Controller
           'JudulTA'=>'required|string|max:40',
           'NIP'=>'required',
         ]);
-        
+
         JudulTA::create($JudulTA);
 
         return redirect('judulTa')->with('success','Data has been Inserted');
