@@ -17,11 +17,13 @@
                     <button type="submit" class="btn btn-primary">Lihat Persyaratan Pendaftaran TA</button>
                 </div>
 
+                
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Pendaftaran TA</button>
+                    <a href="{{action('JudulTAController@create')}}" class="btn btn-primary">
+                    {{csrf_field()}} 
+                    Pendaftaran . TA {{Auth::user()->username}}</a>
                 </div>
-
-
+                
 
                 <div class="card-body">
                     @if (session('status'))

@@ -2,3 +2,5 @@ CREATE TRIGGER `delete_users` BEFORE DELETE ON `mahasiswas`
  FOR EACH ROW BEGIN
 DELETE FROM `users` WHERE `users`.`username` = OLD.NIM;
 END
+
+CREATE TRIGGER `delete_users_dosens` BEFORE DELETE ON `dosens` FOR EACH ROW BEGIN DELETE FROM `users` WHERE `users`.`username` = OLD.NIP; END
